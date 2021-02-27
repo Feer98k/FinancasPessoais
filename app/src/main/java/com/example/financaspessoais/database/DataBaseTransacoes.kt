@@ -14,19 +14,19 @@ import com.example.financaspessoais.model.Transacao
 @Database(version = 1, entities = [Transacao::class], exportSchema = false)
 @TypeConverters(*[TipoTransacaoConverter::class,DataConverter::class])
 
-abstract class DataBase : RoomDatabase() {
+abstract class DataBaseTransacoes : RoomDatabase() {
     abstract fun TransacaoDAO(): TransacaoDAO
 
     companion object {
         private const val DB_NAME = "db_notes"
-        private var instance: DataBase? = null
+        private var instance: DataBaseTransacoes? = null
 
-        fun getInstance(context: Context): DataBase? {
+        fun getInstance(context: Context): DataBaseTransacoes? {
             if (instance == null) {
-                synchronized(DataBase::class) {
+                synchronized(DataBaseTransacoes::class) {
                     instance = Room.databaseBuilder(
                         context.applicationContext,
-                        DataBase::class.java, DB_NAME
+                        DataBaseTransacoes::class.java, DB_NAME
                     )
                         .allowMainThreadQueries()
                         .addMigrations()

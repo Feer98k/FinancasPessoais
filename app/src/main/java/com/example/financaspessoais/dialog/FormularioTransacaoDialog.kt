@@ -10,13 +10,11 @@ import android.widget.ArrayAdapter
 import android.widget.EditText
 import android.widget.Spinner
 import com.example.financaspessoais.R
-import com.example.financaspessoais.database.DataBase
-import com.example.financaspessoais.database.dao.TransacaoDAO
+import com.example.financaspessoais.database.DataBaseTransacoes
 import com.example.financaspessoais.dialog.converteParaCalendar
 import com.example.financaspessoais.extensions.formatarDataBr
 import com.example.financaspessoais.model.TipoTransacao
 import com.example.financaspessoais.model.Transacao
-import java.math.BigDecimal
 import java.util.*
 
 abstract class FormularioTransacaoDialog(
@@ -49,7 +47,7 @@ abstract class FormularioTransacaoDialog(
                 val campoValorTransacao = recursoTransacaoValor.text.toString()
                 val campoTransacaoCategoria = recursoTransacaoCategoria.selectedItem.toString()
                 val campoTransacaoData = recursoTransacaoData.text.toString()
-                val posicao : Int = DataBase.getInstance(context)!!.TransacaoDAO().getAllTransacao().size
+                val posicao : Int = DataBaseTransacoes.getInstance(context)!!.TransacaoDAO().getAllTransacao().size
                 val valorTransacaoFormatado = converteValorParaBigDecimal(campoValorTransacao)
                 val data = campoTransacaoData.converteParaCalendar()
                 val tipoEnumCriado = tipoTransacao

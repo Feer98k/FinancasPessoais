@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/azul_default"
-    tools:context=".ui.activity.MainActivity">
+    tools:context=".ui.activity.ResumoUsuario">
 
 
     <androidx.cardview.widget.CardView
@@ -139,7 +139,7 @@
         android:layout_margin="8dp"
         android:background="@drawable/fundo_lista"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/main_gradiente"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/main_cardView"
@@ -156,7 +156,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.85"
         app:menu_colorNormal="#367C25"
         app:menu_colorPressed="#266817"
         app:menu_colorRipple="#195b09">
@@ -185,7 +185,6 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:src="@drawable/ic_baseline_arrow_downward_24"
-
             app:fab_label="Adicionar despesa"
             app:fab_size="mini"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -196,5 +195,51 @@
             app:layout_constraintVertical_bias="0.85" />
 
     </com.github.clans.fab.FloatingActionMenu>
+    <View
+        android:id="@+id/main_gradiente"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:background="@drawable/fundo_gradiente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/main_fundo_buttons"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <View
+        android:id="@+id/main_fundo_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#eeeeee"
+        app:layout_constraintVertical_bias="1.0"
+        />
+    <ImageButton
+        android:id="@+id/main_btn_relatorio_resumo"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:src="@drawable/ic_balance"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="@id/main_fundo_buttons"
+        app:layout_constraintTop_toTopOf="@id/main_fundo_buttons"
+        app:layout_constraintEnd_toEndOf="@id/main_fundo_buttons"
+        app:layout_constraintBottom_toBottomOf="@id/main_fundo_buttons"
 
+        app:layout_constraintHorizontal_bias="0.4"
+        />
+    <ImageButton
+        android:id="@+id/main_btn_grafico_resumo"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        app:layout_constraintStart_toStartOf="@id/main_fundo_buttons"
+        app:layout_constraintTop_toTopOf="@id/main_fundo_buttons"
+        app:layout_constraintEnd_toEndOf="@id/main_fundo_buttons"
+        app:layout_constraintBottom_toBottomOf="@id/main_fundo_buttons"
+        android:src="@drawable/ic_pie_chart"
+        android:scaleType="centerCrop"
+        app:layout_constraintHorizontal_bias="0.6"
+
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

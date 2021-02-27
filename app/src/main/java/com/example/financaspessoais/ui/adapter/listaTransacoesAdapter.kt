@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.financaspessoais.R
-import com.example.financaspessoais.database.DataBase
+import com.example.financaspessoais.database.DataBaseTransacoes
 import com.example.financaspessoais.extensions.formataMoedaBrasil
 import com.example.financaspessoais.extensions.formatarDataBr
 import com.example.financaspessoais.model.ResumoView
@@ -28,7 +28,7 @@ class listaTransacoesAdapter(
     var onClick: (transacao: Transacao) -> Unit = {
     }
 
-    var dao = DataBase.getInstance(context)!!.TransacaoDAO()
+    var dao = DataBaseTransacoes.getInstance(context)!!.TransacaoDAO()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TransacoesHolder {
         val inflate = LayoutInflater.from(context)

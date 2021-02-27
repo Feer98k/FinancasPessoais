@@ -2,13 +2,10 @@ package com.example.financaspessoais.model
 
 import android.content.Context
 import android.view.View
-import android.view.Window
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.example.financaspessoais.R
 import com.example.financaspessoais.extensions.formataMoedaBrasil
-import com.example.financaspessoais.ui.activity.MainActivity
-import java.math.BigDecimal
 
 class ResumoView(
     private val view: View,
