@@ -1,7 +1,7 @@
 # FinancasPessoais
 Aplicativo para controle de finanças Pessoais
 # ScreenShots
-<img src="screenshots/main_activity.png" width ="150" ><img src="screenshots/graficos.jpeg" width ="150" > <img src="screenshots/adiciona_receita.jpeg" width ="150" >
+<img src="screenshots/main_activity.png" width ="150" >  <img src="screenshots/adiciona_receita.jpeg" width ="150" >  <img src="screenshots/graficos.jpeg" width ="150" >
 # Recursos
  - Floating Actions Button by clans ('com.github.clans:fab:1.6.4')
  - Graficos by AnyChart('com.github.AnyChart:AnyChart-Android:1.1.2')
