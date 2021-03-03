@@ -8,4 +8,3 @@ Aplicativo para controle de finanças Pessoais
  - multidex enable ('com.android.support:multidex:1.0.3')
  - Room database para persistencia interna
  
- Projeto desenvolvido em Kotlin/java utilizando a arquitetura MVVM.
